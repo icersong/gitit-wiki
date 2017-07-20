@@ -1,33 +1,30 @@
-Gitit Bigger
+Gitit WIKI 
 ============
 
-Gitit Bigger: Git and Markdown based wiki, Bootstrap, ace Editor, syntax
+Gitit WIKI: Git and Markdown based wiki, Bootstrap, ace Editor, syntax
 highlight and docker deploy support.
 
-基于 Git 和 Markdown 的超棒的 Wiki 系统，Bootstrap、Ace
-编辑器等增强，支持 Docker 部署。
-
-开始 Start Bigger
+Start Gitit-WIKI
 =================
 
-    假定你已安装 Git 和 Gitit
+-  Normal install
 
--  普通版
+   With gitit and git installed 
 
 .. code:: bash
 
-    git clone https://github.com/menduo/gitit-bigger ~/workspace/gitit;
+    git clone https://github.com/icersong/gitit-wiki ~/workspace/gitit;
     cd ~/workspace/gitit;
     cp sample.gitit.conf my-gitit.conf;
     ./run/run.sh start;
 
--  Docker 版
+-  Docker install
 
 .. code:: bash
 
-    docker run -d --name gitit -p 7500:7500 menduo/gitit-bigger;
+    docker run -d --name gitit -p 3000:3000 icersong/gitit-wiki;
 
-访问：\ http://127.0.0.1:7500
+See: \ http://127.0.0.1:7500
 
 Demo & Screeenshots
 ===================
@@ -35,69 +32,64 @@ Demo & Screeenshots
 Demos
 -----
 
--  Gitit Bigger：\ https://wiki.menduo.net/gitit-bigger (Read Only)
--  Gitit 官方：\ http://gitit.net
+-  Gitit offical website:\ http://gitit.net
 
-截图 Screenshots
+Screenshots
 ----------------
 
-查看 View
+View
 ~~~~~~~~~
 
--  `view.png <https://github.com/menduo/gitit-bigger/blob/master/screenshots/view.png>`__
--  `view-ipad-mini.png <https://github.com/menduo/gitit-bigger/blob/master/screenshots/view-ipad-mini.png>`__
--  `view-iphone6.png <https://github.com/menduo/gitit-bigger/blob/master/screenshots/view-iphone6.png>`__
+-  `view.png <https://github.com/icersong/gitit-wiki/blob/master/screenshots/view.png>`__
+-  `view-ipad-mini.png <https://github.com/icersong/gitit-wiki/blob/master/screenshots/view-ipad-mini.png>`__
+-  `view-iphone6.png <https://github.com/icersong/gitit-wiki/blob/master/screenshots/view-iphone6.png>`__
 
-编辑 Edit
+Edit
 ~~~~~~~~~
 
--  `edit.png <https://github.com/menduo/gitit-bigger/blob/master/screenshots/edit.png>`__
--  `edit-ipad-mini.png <https://github.com/menduo/gitit-bigger/blob/master/screenshots/edit-ipad-mini.png>`__
--  `edit-iphone6.png <https://github.com/menduo/gitit-bigger/blob/master/screenshots/edit-iphone6.png>`__
+-  `edit.png <https://github.com/icersong/gitit-wiki/blob/master/screenshots/edit.png>`__
+-  `edit-ipad-mini.png <https://github.com/icersong/gitit-wiki/blob/master/screenshots/edit-ipad-mini.png>`__
+-  `edit-iphone6.png <https://github.com/icersong/gitit-wiki/blob/master/screenshots/edit-iphone6.png>`__
 
-Gitit 主要特性
+Gitit advantage
 ==============
 
--  无数据库
--  Git 版本控制
--  Markdown 格式
--  Wiki 化：
--  子目录，无限目录（这也是我抛弃其他一些类似 wiki 系统的原因）
--  中文目录、中文标题、中文分类
--  完美支持中文搜索
--  支持分类
--  支持自定义标题
+-  No database
+-  Git version control
+-  Markdown formating
+-  No limited sub folders
+-  Support multi-launguage for folder title category
+-  Support multi-launguage search
+-  Support custom title
+-  Support code highlight
+-  Support formula
+-  Support export epub pandoc ... 
 
--  代码高亮
--  支持公式等（我基本不用）
--  导出 epub 等（基于 pandoc）
-
-更多关于 Gitit 的安装、部署、优化的中文介绍和说明，请见: -
-`gitit\_base.md
-简介、安装、部署 <https://github.com/menduo/gitit-bigger/blob/master/docs/gitit_base.md>`__
+More about Gitit install and optimization, please see:
+- `gitit\_base.md
+introduce and install
+<https://github.com/icersong/gitit-wiki/blob/master/docs/gitit_base.md>`__
 - `gitit\_config.md
-配置 <https://github.com/menduo/gitit-bigger/blob/master/docs/gitit_config.md>`__
+configure <https://github.com/icersong/gitit-wiki/blob/master/docs/gitit_config.md>`__
 
-Gitit Bigger VS Gitit
+Gitit WIKI improved Gitit
 =====================
 
--  Bootstrap 模板
+-  Bootstrap
 -  Ace Editor
--  Ace Editor 的编辑模式已设为 ``markdown``\ 。
--  支持代码高亮
--  搜索、替换（cmd+option+f）
--  Tab 缩进、恢复（tab、shift+tab）
--  快捷键
+-  Ace Editor default formatting is ``markdown``\ 。
+-  Support code highlight
+-  Search & Replace (cmd+option+f)
+-  Tab & recovery (tab、shift+tab)
+-  Shortcut-key
 -  ...
 
--  采用配置文件方式启动，多个实例轻松共享资源
--  支持自定义 Ace 编辑器启用/禁用、模式、样式等配置
--  支持 Markdown 模式下快捷键
--  数学公式：支持 MathJax 启用/禁用，自定义 MathJax 源
--  代码高亮：支持使用 highlight.js 高亮代码 - Gitit 的高亮需要服务端支持
--  增加启动、部分、自动备份脚本或帮助
+-  Support shortcut key on Markdown mode 
+-  Math formula: Support MathJax enable/disable，custom MathJax source 
+-  Code highlight: Supoort code highlight by highlight.js - Gitit need server support
+-  Add auto git pull & push backup script
 
-注意：wikidata 仓库
+wikidata repostory
 ===================
 
 请注意检查你的 ``wikidata/`` 目录的 git 配置。请注意： - ``wikidata``
@@ -135,7 +127,7 @@ Gitit Bigger 提供一定程度的配置。
 包括： - ace 编辑器 - markdown - MathJax 数学公式插件 - highlightjs
 代码高亮 - Google Analytics 统计
 
-详情见：\ `gitit\_bigger\_config.md <https://github.com/menduo/gitit-bigger/blob/master/docs/gitit_bigger_config.md>`__
+详情见：\ `gitit\_bigger\_config.md <https://github.com/icersong/gitit-wiki/blob/master/docs/gitit_bigger_config.md>`__
 
 工具 Utils
 ==========
@@ -145,7 +137,7 @@ Gitit Bigger 提供一定程度的配置。
 -  自动备份辅助
 
 详情见：-
-`gitit\_bigger\_utils.md <https://github.com/menduo/gitit-bigger/blob/master/docs/gitit_bigger_utils.md>`__
+`gitit\_bigger\_utils.md <https://github.com/icersong/gitit-wiki/blob/master/docs/gitit_bigger_utils.md>`__
 
 通过 Shell 编辑 wiki
 ====================
@@ -184,7 +176,7 @@ wiki pages 的仓库 2. 只有提交到仓库里的文件，才会被 Gitit 添�
 ``cp sample.gitit.conf my-gitit-private.conf;`` 2. 更新
 ``my-gitit-private.conf`` 里的相关配置，尤其是：端口、wikidata
 目录（详见\ `gitit\_config.md
-配置 <https://github.com/menduo/gitit-bigger/blob/master/docs/gitit_config.md>`__\ ）
+配置 <https://github.com/icersong/gitit-wiki/blob/master/docs/gitit_config.md>`__\ ）
 3. 启动新实例：\ ``gitit -f my-gitit-private.conf``
 
 注意 - 如果 ``my-gitit.conf`` 和 ``my-gitit-private.conf``
@@ -197,44 +189,44 @@ Docs
 ====
 
 -  `Gitit
-   简介、安装、部署 <https://github.com/menduo/gitit-bigger/blob/master/docs/gitit_base.md>`__
+   简介、安装、部署 <https://github.com/icersong/gitit-wiki/blob/master/docs/gitit_base.md>`__
 -  `Gitit
-   配置项介绍 <https://github.com/menduo/gitit-bigger/blob/master/docs/gitit_config.md>`__
+   配置项介绍 <https://github.com/icersong/gitit-wiki/blob/master/docs/gitit_config.md>`__
 -  `Gitit-Bigger-Docker
-   版介绍 <https://github.com/menduo/gitit-bigger/blob/master/docs/gitit_bigger_docker.md>`__
+   版介绍 <https://github.com/icersong/gitit-wiki/blob/master/docs/gitit_bigger_docker.md>`__
 -  `Gitit-Bigger
-   定制说明 <https://github.com/menduo/gitit-bigger/blob/master/docs/gitit_bigger_config.md>`__
+   定制说明 <https://github.com/icersong/gitit-wiki/blob/master/docs/gitit_bigger_config.md>`__
 -  `Gitit-Bigger
-   工具.md <https://github.com/menduo/gitit-bigger/blob/master/docs/gitit_bigger_utils.md>`__
+   工具.md <https://github.com/icersong/gitit-wiki/blob/master/docs/gitit_bigger_utils.md>`__
 
 Changelogs
 ==========
 
 -  简体中文:
-   `CHANGELOG.md <https://github.com/menduo/gitit-bigger/blob/master/CHANGELOG.md>`__
+   `CHANGELOG.md <https://github.com/icersong/gitit-wiki/blob/master/CHANGELOG.md>`__
 -  English:
-   `CHANGELOG\_EN.md <https://github.com/menduo/gitit-bigger/blob/master/CHANGELOG_EN.md>`__
+   `CHANGELOG\_EN.md <https://github.com/icersong/gitit-wiki/blob/master/CHANGELOG_EN.md>`__
 
-反馈、建议、联系
+Feedback
 ================
 
--  Github Issues：\ https://github.com/menduo/gitit-bigger/issues
--  Email: shimenduo@gmail.com
+-  Github Issues：\ https://github.com/icersong/gitit-wiki/issues
+-  Email: icersong@gmail.com
 
 Links
 =====
 
--  Github：\ https://github.com/menduo/gitit-bigger
--  DockreHub：\ https://hub.docker.com/r/menduo/gitit-bigger
+-  Github：\ https://github.com/icersong/gitit-wiki
+-  DockreHub：\ https://hub.docker.com/r/icersong/gitit-wiki
 -  Demo: https://wiki.menduo.net/gitit-bigger (Read Only)
 -  gitit official site: http://gitit.net
 -  gitit official github: https://github.com/jgm/gitit
--  在Archlinux上部署gitit Wiki:
+-  install gitit Wiki on Archlinux:
    http://www.360doc.com/content/12/0518/21/21412_211977928.shtml
 -  Gitit - git based wiki:
    http://walkingice.blogspot.hk/2011/11/gitit-git-based-wiki.html
 -  Hyzual/docker-gitit: https://github.com/Hyzual/docker-gitit
 -  Gitit Bootstrap
-   模板：\ `Changaco/gitit-bootstrap <https://github.com/Changaco/gitit-bootstrap>`__
+   Template:\ `Changaco/gitit-bootstrap <https://github.com/Changaco/gitit-bootstrap>`__
 -  Gitit ace editor 支持 `Getting the Ace editor to work with
    gitit <https://gist.github.com/lmullen/e2d2d4aabf84220c517a>`__
